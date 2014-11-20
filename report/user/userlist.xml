@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<REPORT>
+   <TITLE>Sales Report</TITLE>
+   <BACKGROUND_COLOR>#FFFFFF</BACKGROUND_COLOR>
+   <PAGE SIZE="25"></PAGE>
+   <GROUPS>
+      <GROUP NAME="maingroup">
+         <FIELDS>
+            <ROW>
+               <COL TYPE="FIELD">username</COL>
+               <COL TYPE="FIELD">fullname</COL>
+               <COL TYPE="FIELD">usertype</COL>
+            </ROW>
+         </FIELDS>
+      </GROUP>
+   </GROUPS>
+</REPORT>

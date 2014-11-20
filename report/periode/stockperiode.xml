@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<!DOCTYPE REPORT SYSTEM "PHPReport.dtd">
+<REPORT>
+   <TITLE>Users Report</TITLE>
+   <BACKGROUND_COLOR>#FFFFFF</BACKGROUND_COLOR>
+   <PAGE BORDER="1" SIZE="25" CELLSPACING="0" CELLPADDING="5" WIDTH="900">
+      <HEADER>
+         <ROW>
+            <COL COLSPAN="3">
+               <XHTML>
+                  <TABLE BORDER="0" WIDTH="100%">
+                     <TR>
+                        <TD CLASS="TITLE" ALIGN="LEFT" VALIGN="TOP" COLSPAN="2">
+                           Ranch Market
+                        </TD>
+                        <TD CLASS="REGULAR" ALIGN="LEFT" VALIGN="TOP" ROWSPAN="2">
+                        </TD>
+                        <TD ALIGN="RIGHT" VALIGN="TOP" WIDTH="50" ROWSPAN="2">
+                           <IMG WIDTH="150px" SRC="../../images/ranchmarket.jpg" BORDER="0"/>
+                           <SPAN>
+                               "Printed By: "  
+                               <BR/>
+                               Printed Date: 
+                           </SPAN>
+                        </TD>
+                     </TR>
+                     <TR>
+                        <TD ALIGN="LEFT" VALIGN="CENTER" CLASS="PAGE_LAYER">
+                           <SPAN CLASS="BOLD">
+                              STOCK TAKE LIST REPORT
+                           </SPAN>	
+                        </TD>
+                        <TD ALIGN="CENTER" VALIGN="CENTER" CLASS="DOCUMENT_LAYER">
+                           Jakarta
+                        </TD>
+                     </TR>
+                  </TABLE>
+               </XHTML>                                
+            </COL>
+         </ROW>
+         <ROW>
+            <COL COLSPAN="3">User List</COL>
+         </ROW>
+      </HEADER>		
+      <FOOTER>
+         <ROW>
+            <COL ALIGN="RIGHT" COLSPAN="2">page total</COL>            
+         </ROW>
+      </FOOTER>		
+   </PAGE>
+   <GROUPS>
+      <GROUP NAME="maingroup">
+         <FIELDS>
+            <ROW>
+               <COL TYPE="FIELD">id</COL>
+               <COL TYPE="FIELD">diff</COL>
+               <COL TYPE="FIELD">seq</COL>
+               <COL TYPE="FIELD">productid</COL>
+               <COL TYPE="FIELD">productname</COL>
+               <COL TYPE="FIELD">quantity</COL>
+               <COL TYPE="FIELD">exist</COL>
+               <COL TYPE="FIELD">stock</COL>
+            </ROW>
+         </FIELDS>
+      </GROUP>
+   </GROUPS>
+</REPORT>
