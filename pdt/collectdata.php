@@ -197,9 +197,9 @@ function inserttransstockdetail($qty){
 
 function updatetransstokdetail($qty){
     if($_SESSION['periodesession'] == 1){
-        $query = "UPDATE transstockdetail SET batchno='" . $_SESSION['batchno'] . "',qty1=" .  $qty . ",qty2=" . $qty . " WHERE transstock=" . $_SESSION['transstock'] . " AND product='" . $_SESSION['ean'] ."'";        
+        $query = "UPDATE transstockdetail SET batchno='" . $_SESSION['batchno'] . "',nopid=" . $_SESSION['nopid'] . ",qty1=" .  $qty . ",qty2=" . $qty . " WHERE transstock=" . $_SESSION['transstock'] . " AND product='" . $_SESSION['ean'] ."'";        
     }else{
-        $query = "UPDATE transstockdetail SET batchno='" . $_SESSION['batchno'] . "',qty2=" . $qty . " WHERE transstock=" . $_SESSION['transstock'] . " AND product='" . $_SESSION['ean'] ."'";        
+        $query = "UPDATE transstockdetail SET batchno='" . $_SESSION['batchno'] . "',nopid=" . $_SESSION['nopid']. ",qty2=" . $qty . " WHERE transstock=" . $_SESSION['transstock'] . " AND product='" . $_SESSION['ean'] ."'";        
     }
 
     $rs = mysql_query($query);

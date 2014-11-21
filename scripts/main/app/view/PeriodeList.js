@@ -465,28 +465,28 @@ Ext.define('App.view.PeriodeList' ,{
                             text: '*'                            
                         },{
                         	xtype: 'fieldcontainer',
-                        	fieldLabel: 'PID',
-                        	defaultType: 'radiofield',
-                        	defaults: {
-                        		flex: 1,
-                        	},
-                        	layout: 'hbox',
+                        	fieldLabel: 'PID',                        	
+                        	defaultType: 'radiofield',                        	
+                        	layout: 'hbox',                        	
                         	items: [
                         	    {
                         	    	boxLabel: 'All',
                         	    	name: 'pid',
                         	    	inputValue: 'all',
                         	    	id: 'radioall',
+                        	    	padding: '10 10 10 10',
                         	    },{
                         	    	boxLabel: 'With PID',
                         	    	name: 'pid',
                         	    	inputValue: 'wpid',
                         	    	id: 'radiowpid',
+                        	    	padding: '10 10 10 10',
                         	    },{
                         	    	boxLabel: 'Without PID',
                         	    	name: 'pid',
                         	    	inputValue: 'wopid',
                         	    	id: 'radiowopid',
+                        	    	padding: '10 10 10 10',
                         	    }
                         	]                        
                         }
@@ -501,6 +501,16 @@ Ext.define('App.view.PeriodeList' ,{
                             if(btn==='yes'){      
                                 var win = button.up('window');                       
                                 var form = win.down('form');
+                                var pid;
+                                if (form.getForm().findField('radioall').getValue() == true){
+                                	pid = 'all';  
+                                }
+                                if (form.getForm().findField('radiowpid').getValue() == true){
+                                	pid = 'wpid';
+                                }
+                                if (form.getForm().findField('radiowopid').getValue() == true){
+                                	pid = 'wopid';
+                                }                                
                                 Ext.core.DomHelper.append(document.body, {
                                             tag : 'iframe',
                                             id : 'downloadIframe',
@@ -508,7 +518,7 @@ Ext.define('App.view.PeriodeList' ,{
                                             width : 0,
                                             height : 0,
                                             css : 'display:none;visibility:hidden;height:0px;',
-                                            src : 'report/periode/transactionbyperiodecsv.php?periodeid=' + obj.id + '&binname=' + form.getForm().findField('bin').getValue()
+                                            src : 'report/periode/transactionbyperiodecsv.php?periodeid=' + obj.id + '&binname=' + form.getForm().findField('bin').getValue() + '&pid=' + pid
                                 });                        
                             } 
                         });                         

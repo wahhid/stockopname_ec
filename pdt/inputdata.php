@@ -55,7 +55,7 @@ if(isset($_POST['submit'])){
                 $_SESSION['uom'] = $product['uom'];            
                 $_SESSION['productname'] = $product['productname'];
                 $_SESSION['article'] = $product['article'];
-                $_SESSION['nopid'] = false;
+                $_SESSION['nopid'] = 0;
                 header('Location: inputbatch.php');
             }else{
                //No Data on Stockbin	
@@ -64,7 +64,7 @@ if(isset($_POST['submit'])){
             	$_SESSION['uom'] = $product['uom'];
             	$_SESSION['productname'] = $product['productname'];
             	$_SESSION['article'] = $product['article'];
-            	$_SESSION['nopid'] = true;
+            	$_SESSION['nopid'] = 1;
             	header('Location: inputbatch.php');
             }                                                    
         }else{
